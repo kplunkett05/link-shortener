@@ -71,7 +71,7 @@ export default function Home() {
             <label className="text-xs text-gray-200 ml-1">Custom Alias (Optional)</label>
             <input
               type="text"
-              placeholder="e.g. 'my-resume'"
+              placeholder="e.g. 'my-flattened-link'"
               value={alias}
               onChange={(e) => setAlias(e.target.value)}
               className="p-4 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
