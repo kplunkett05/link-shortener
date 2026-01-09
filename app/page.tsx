@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import QRCode from "react-qr-code";
 
 export default function Home() {
   const [url, setUrl] = useState("");
@@ -108,6 +109,11 @@ export default function Home() {
                 {copied ? "✅ Copied!" : "📋 Copy"}
               </button>
             </div>
+
+            <div className="p-4 bg-white rounded-lg">
+              <QRCode value={shortUrl} size={150} />
+            </div>
+
           </div>
         )}
       </div>
