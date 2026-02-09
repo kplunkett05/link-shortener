@@ -39,6 +39,8 @@ export async function POST(req: Request){
         let shortId;
         
         if(customAlias){
+            customAlias = customAlias.replace(/\s+/g, "-");
+
             const exists = await redis.exists(customAlias);
             if(exists){
                 return NextResponse.json({error: "Alias already taken."}, {status: 409})
